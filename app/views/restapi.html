@@ -1,0 +1,13 @@
+<div ng-controller="RestapiCtrl">
+<form name="myForm" class="form-inline my-2 my-lg-0">
+        <center><input type="text" runat="server" name="ayahText    " ng-model="ayahText" class="form-control mr-sm-2" ng-keypress="console.log($event)" ng-model-options="{updateOn : 'change blur'}"></center>
+        <center><h1><mark>{{ayahText}}</mark></h1></center>
+        <!--<h2>{{greeting.results[0].AyahText}}</h2>-->
+    <p>The content is {{greeting.Total}}</p>
+
+    <div ng-repeat="n in greeting.results">
+        <h3 id="aya" class="bg-faded">{{n.AyahText}}</h3><br>
+      </div>
+</form>
+</div>
+
