@@ -12,7 +12,7 @@
 angular.module('restapicodeApp')
   .controller('RestapiCtrl', function($scope, $http) {
     $scope.ayahText = "";
-    var url = 'http://quranrest.herokuapp.com/word/' + $scope.ayahText;
+    var url = 'https://quranrest.herokuapp.com/word/' + $scope.ayahText;
 
     $scope.keypress = function ($event){
       console.log("=== key down pressed === ", $event);
@@ -23,7 +23,7 @@ angular.module('restapicodeApp')
     };
 
     function getPost() {
-      url = 'http://quranrest.herokuapp.com/word/' + $scope.ayahText;      
+      url = 'https://quranrest.herokuapp.com/word/' + $scope.ayahText;      
       $http.get(url).
         then(function(response) {
             console.log(url);
@@ -36,7 +36,7 @@ angular.module('restapicodeApp')
       console.log("WATCH === key down pressed === ");
       if (val && val.length > 1) {
           console.log(val);
-          url = 'http://quranrest.herokuapp.com/word/' + $scope.ayahText;
+          url = 'https://quranrest.herokuapp.com/word/' + $scope.ayahText;
           getPost();
       }
     })

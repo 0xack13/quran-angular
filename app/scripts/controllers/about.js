@@ -10,7 +10,7 @@
 angular.module('restapicodeApp')
   .controller('AboutCtrl', function ($scope, $http) {
     $scope.ayahText = "";
-    var url = 'http://quranrest.herokuapp.com/sura/' + $scope.ayahText;
+    var url = 'https://quranrest.herokuapp.com/sura/' + $scope.ayahText;
 
     $scope.keypress = function ($event){
       console.log("=== key down pressed === ", $event);
@@ -21,7 +21,7 @@ angular.module('restapicodeApp')
     };
 
     function getPost() {
-      url = 'http://quranrest.herokuapp.com/sura/' + $scope.ayahText;      
+      url = 'https://quranrest.herokuapp.com/sura/' + $scope.ayahText;      
       $http.get(url).
         then(function(response) {
             console.log(url);
@@ -36,7 +36,7 @@ angular.module('restapicodeApp')
       var numVal = val.match(/^\d+$/);
       if (numVal) {
           console.log(val);
-          url = 'http://quranrest.herokuapp.com/sura/' + $scope.ayahText;
+          url = 'https://quranrest.herokuapp.com/sura/' + $scope.ayahText;
           getPost();
       }
     })
